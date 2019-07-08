@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { Route, Link } from 'react-router-dom' 
 // import logo from './logo.svg';
 import Country from './Country' 
+import CountryInfo from './CountryInfo' 
 // import Music from './Music' 
 // import Images from './Images' 
 import Nav from './Nav' 
@@ -34,7 +35,7 @@ class App extends Component {
           )
         }}
         />
-
+        <CountryInfo />
         <Route path='/Explore' component={Explore}/>
        
         <Route path='/Country/:id' render={(props)=>{
@@ -50,5 +51,6 @@ class App extends Component {
     )
   }
 }
+
 
 export default App;
