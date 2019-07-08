@@ -32,6 +32,7 @@ class CountryInfo extends Component{
     return(
       <div>
         <h1>Country Information</h1>
+        <h1>{this.props.name}</h1>
         
       </div>
     )
