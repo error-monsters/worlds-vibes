@@ -3,7 +3,7 @@ import { Route, Link } from 'react-router-dom'
 // import logo from './logo.svg';
 import Country from './Country' 
 // import Music from './Music' 
-// import Images from './Images' 
+import Images from './Images' 
 import Nav from './Nav' 
 import Explore from './Explore' 
 import './App.css'
