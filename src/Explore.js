@@ -8,8 +8,9 @@ import './Explore.css'
 
 
 function getTooltipContent(marker) {
+  console.log(marker)
   return   (
-    <Link to={`/Country/${marker.city}`}>{marker.city}</Link>
+    <Link to={`/Country/${marker.country}`}>{marker.city}, {marker.country}</Link>
   ); //pop up content
   
 }
@@ -36,35 +37,38 @@ function Explore() {
   }
 
   return (
-    <div style={{ fontFamily: 'arial', width: '100vw', height: '100vh' }}>
-      <Link className='ex-home' to='/'>Home</Link> 
-      <ReactGlobe
-        markers={markers}
-        markerOptions={{
-          getTooltipContent,
-        }}
-        onClickMarker={onClickMarker}
-        onDefocus={onDefocus}
-      />
-       
-      {details && (
-        <div 
-          style={{ //pop up box
-            background: 'white', 
-            position: 'absolute',
-            fontSize: 20,
-            top: 0,
-            right: 0,
-            padding: 12,
-          }}>
-          <p>{details}</p>
-          <p>
-            EVENT: type={event.type}, position=
-            {JSON.stringify(event.pointerEventPosition)})
-          </p>
+    <div class="explore-route">
+      <Nav/> 
+      <div style={{ fontFamily: 'arial', width: '100vw', height: '100vh' }}>
+        <Link className='ex-home' to='/'>Home</Link> 
+        <ReactGlobe
+          markers={markers}
+          markerOptions={{
+            getTooltipContent,
+          }}
+          onClickMarker={onClickMarker}
+          onDefocus={onDefocus}
+        />
         
-        </div>
-      )}
+        {details && (
+          <div 
+            style={{ //pop up box
+              background: 'white', 
+              position: 'absolute',
+              fontSize: 20,
+              top: 0,
+              right: 0,
+              padding: 12,
+            }}>
+            <p>{details}</p>
+            <p>
+              EVENT: type={event.type}, position=
+              {JSON.stringify(event.pointerEventPosition)})
+            </p>
+          
+          </div>
+        )}
+      </div>
     </div>
   );
 }
