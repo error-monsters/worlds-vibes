@@ -36,3 +36,8 @@ nav {
     left: 33%;
     z-index: 1;
   }
+
+  .country-route .header-container {
+    position: relative;
+    left: 10%;
+  }
