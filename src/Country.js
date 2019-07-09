@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { Route} from 'react-router-dom' 
 import axios from 'axios';
 import './Country.css'
-
+import Images from './Images';
 
  class Country extends Component {
   state = {
@@ -18,12 +18,13 @@ import './Country.css'
   }
 
   componentDidMount() {
-    // console.log(this.props.countryName)
+
+    //console.log(this.props.countryName)
     axios.get(`https://restcountries.eu/rest/v2/name/${this.props.countryName}`)
     // axios.get(`https://restcountries.eu/rest/v1/name/{countryName}`)
 
     .then( (result)=>{ 
-      console.log(result)
+      //console.log(result)
       // const countryName = this.props.id
         this.setState({
           country: {
@@ -66,6 +67,8 @@ import './Country.css'
                 
                 
             </p>
+            {this.state.country.name.length && <Images countryName={this.state.country.name}/>}
+            
         </div>
         </div>
     )
