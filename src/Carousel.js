@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import M from "materialize-css";
 import "materialize-css/dist/css/materialize.min.css";
 // import one from "../public/1.jpg";
-import two from "../public/2.png";
-import three from "../public/3.png";
- import four from "../public/4.jpg";
+import two from "./2.png";
+import three from "./3.png";
+ import four from "./4.jpg";
 // import five from "../public/5.jpg";
 
 class Carousel extends Component {
@@ -39,7 +39,7 @@ class Carousel extends Component {
         <a className="carousel-item">
           <img alt="3" src={three} />
         </a>
-        {/* <a className="carousel-item">
+        {/* {/* <a className="carousel-item"> */}
           <img alt="4" src={four} />
         </a>
         <a className="carousel-item">

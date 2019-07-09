@@ -45,14 +45,11 @@ import test from './test'
 
   render() {
     return (
-<<<<<<< HEAD
-      <div>
-
-        <test/>
+    
+     
        
-=======
-      <div className="country-body">
->>>>>>> a9306b0db70d04f8f985dc96e8ea1442f3159f86
+      <div >
+           <test/>
         <div className="country-info">  
         <br/>
              <h1> {this.state.country.name}</h1> 
