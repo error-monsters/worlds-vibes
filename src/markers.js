@@ -26,6 +26,7 @@ export default [
     coordinates: [39.9042, 116.4074],
     music: 'https://www.lengua.com/anthems/China.mp3',
     value: 0,
+
   },
   {
     id: 4,
