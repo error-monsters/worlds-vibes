@@ -10,6 +10,8 @@ import './App.css'
 import earth1 from "./earth1.png"
 import vid from './vid.mp4';
 
+import About from './About'
+
 
 
 class App extends Component {
@@ -37,7 +39,7 @@ class App extends Component {
         />
        
         <Route path='/Explore' component={Explore}/>
-       
+
         <Route path='/Country/:id' render={(props)=>{
           const countryName = props.match.params.id
           // <Country countryName={countryName} />
@@ -49,6 +51,8 @@ class App extends Component {
           )
         }}
         /> 
+
+      <Route path='/About' component={About}/> 
       </React.Fragment> 
     )
   }
