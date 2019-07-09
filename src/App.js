@@ -2,12 +2,10 @@ import React, {Component} from 'react';
 import { Route, Link } from 'react-router-dom' 
 // import logo from './logo.svg';
 import Country from './Country' 
-// import CountryInfo from './CountryInfo' 
 // import Music from './Music' 
 // import Images from './Images' 
 import Nav from './Nav' 
 import Explore from './Explore' 
-import VideoCover from 'react-video-cover';
 import './App.css'
 import earth1 from "./earth1.png"
 import vid from './vid.mp4';

@@ -18,13 +18,11 @@ import './Country.css'
   }
 
   componentDidMount() {
-    // console.log(this.props.countryName)
     axios.get(`https://restcountries.eu/rest/v2/name/${this.props.countryName}`)
     // axios.get(`https://restcountries.eu/rest/v1/name/{countryName}`)
 
     .then( (result)=>{ 
       console.log(result)
-      // const countryName = this.props.id
         this.setState({
           country: {
             name: result.data[0].name, // result === xyz
@@ -34,8 +32,6 @@ import './Country.css'
             nativeName: result.data[0].nativeName,
             languages: result.data[0].languages[0].name,
             currencies: result.data[0].currencies[0].name
-
-
           }
         })
 
@@ -43,19 +39,15 @@ import './Country.css'
     .catch ({
 
     })
-    
-
-
-
   }
 
   render() {
     return (
-      <div>
+      <div className="country-body">
         <div className="country-info">  
         <br/>
              <h1> {this.state.country.name}</h1> 
-             <img className ='flag-pic' src={this.state.country.flag} /> 
+             <img className ='flag-pic' src={this.state.country.flag} alt={this.state.country.name}/> 
              <hr />
             <p className="info-style"> 
                 The Capital City is: {this.state.country.capital},
@@ -63,7 +55,6 @@ import './Country.css'
                 therefore the native name is: {this.state.country.nativeName}, 
                 and the spoken language is: {this.state.country.languages}, 
                 the used currency: {this.state.country.currencies}, 
-                
                 
             </p>
         </div>
