@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
 import ReactGlobe from 'react-globe';
 import markers from './markers';
 import Nav from './Nav' 
@@ -7,14 +6,26 @@ import { Link } from 'react-router-dom'
 import './Explore.css'
 
 
+
 function getTooltipContent(marker) {
-  console.log(marker)
-  return   (
-    <Link to={`/Country/${marker.country}`}>{marker.city}, {marker.country}</Link>
-  ); //pop up content
+  // console.log(marker.city)
+  return `${marker.city}, ${marker.country}` // highlited name 
   
 }
 
+function getMarkerLink(marker) {
+  // console.log(marker.city)
+  return   (
+    <div>
+      <p>{marker.city}, {marker.country} </p>
+      <Link to={`/Country/${marker.country}`}> 
+      See More 
+    </Link>
+   </div>
+    
+  ); //pop up content
+  
+}
 function Explore() {
   const [event, setEvent] = useState(null);
   const [details, setDetails] = useState(null);
@@ -25,7 +36,7 @@ function Explore() {
       markerObjectID: markerObject.uuid,
       pointerEventPosition: { x: event.clientX, y: event.clientY }, //change to a new pages 
     });
-    setDetails(getTooltipContent(marker));
+    setDetails(getMarkerLink(marker));
   }
   function onDefocus(previousCoordinates, event) {
     setEvent({
@@ -44,30 +55,19 @@ function Explore() {
         <ReactGlobe
           markers={markers}
           markerOptions={{
-            getTooltipContent,
+            getTooltipContent, 
           }}
+
           onClickMarker={onClickMarker}
           onDefocus={onDefocus}
         />
         
         {details && (
-          <div 
-            style={{ //pop up box
-              background: 'white', 
-              position: 'absolute',
-              fontSize: 20,
-              top: 0,
-              right: 0,
-              padding: 12,
-            }}>
+          <div className='page-link' >
             <p>{details}</p>
-            <p>
-              EVENT: type={event.type}, position=
-              {JSON.stringify(event.pointerEventPosition)})
-            </p>
           
           </div>
-        )}
+        )} 
       </div>
     </div>
   );
