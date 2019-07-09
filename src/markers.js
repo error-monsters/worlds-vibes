@@ -23,6 +23,7 @@ export default [
     color: 'gold',
     coordinates: [39.9042, 116.4074],
     value: 0,
+
   },
   {
     id: 5,
@@ -39,15 +40,6 @@ export default [
     coordinates: [24.266906, 45.107849],
     value: 100,
   },
-
-
-
-
-
-
-
-
-
 
   {
     id: 7,
