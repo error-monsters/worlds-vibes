@@ -21,19 +21,12 @@ h1 {
     padding: 15px; 
     border-radius: 20px;
 } 
-<<<<<<< HEAD
-body{ 
-    background-image: url(https://static-2.gumroad.com/res/gumroad/618114383609/asset_previews/e430b34b1f98b55edcd879858b44d4df/retina/Beautiful_20Sunrise_20Scene_204K_20Nature_20Background_20Flowers_20Plants_20Fog_20Mountains.jpg); 
-    background-size: cover;
-} 
-=======
 .country-body{ 
     /* background-image: url(https://static-2.gumroad.com/res/gumroad/618114383609/asset_previews/e430b34b1f98b55edcd879858b44d4df/retina/Beautiful_20Sunrise_20Scene_204K_20Nature_20Background_20Flowers_20Plants_20Fog_20Mountains.jpg);  */
     background-size: cover;
     padding-top: 115px;
     /* position: relative; */
 }
->>>>>>> dc11a9ed39fab60110a48f1c36e710b8d1f649e4
 .info-style {
 font-size: 30px; 
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;

@@ -25,11 +25,14 @@ import Images from './Images';
   }
 
   componentDidMount() {
+
+    //console.log(this.props.countryName)
     axios.get(`https://restcountries.eu/rest/v2/name/${this.props.countryName}`)
     // axios.get(`https://restcountries.eu/rest/v1/name/{countryName}`)
 
     .then( (result)=>{ 
-      console.log(result)
+      //console.log(result)
+      // const countryName = this.props.id
         this.setState({
           country: {
             name: result.data[0].name, // result === xyz
@@ -64,12 +67,7 @@ import Images from './Images';
       }
     }
     return (
-<<<<<<< HEAD
-      <div className="country-body">
-        
-=======
       <div style={styleBackground} className="country-body">
->>>>>>> dc11a9ed39fab60110a48f1c36e710b8d1f649e4
         <div className="country-info">  
         <br/>
              <h1> {this.state.country.name}</h1> 
