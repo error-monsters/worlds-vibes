@@ -3,7 +3,6 @@ import { Route, Link } from 'react-router-dom'
 // import logo from './logo.svg';
 import Country from './Country' 
 // import CountryInfo from './CountryInfo' 
-// import Music from './Music' 
 // import Images from './Images' 
 import Nav from './Nav' 
 import Explore from './Explore' 
@@ -19,7 +18,7 @@ class App extends Component {
   render() {
     return ( 
       <React.Fragment>  
-        
+       
         <Route exact path='/' render={()=>{
           return (
             <div class='home-route'> 

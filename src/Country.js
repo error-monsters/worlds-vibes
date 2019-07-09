@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import { Route} from 'react-router-dom' 
 import axios from 'axios';
 import './Country.css'
+import Music from './Music' 
+import test from './test' 
 
 
  class Country extends Component {
@@ -52,6 +54,9 @@ import './Country.css'
   render() {
     return (
       <div>
+
+        <test/>
+       
         <div className="country-info">  
         <br/>
              <h1> {this.state.country.name}</h1> 
@@ -67,6 +72,8 @@ import './Country.css'
                 
             </p>
         </div>
+
+        <Music />
         </div>
     )
   }
