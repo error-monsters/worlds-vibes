@@ -5,6 +5,7 @@ import './Country.css'
 import Music from './Music' 
 import Carousel from "./Carousel";
 
+import Images from './Images';
 
  class Country extends Component {
   state = {
@@ -16,7 +17,8 @@ import Carousel from "./Carousel";
       nativeName: '',
       languages: '',
       currencies: ''
-    }
+    },
+    backgroundImage: ''
   }
 
   componentDidMount() {
@@ -41,37 +43,45 @@ import Carousel from "./Carousel";
     .catch ({
 
     })
+
+
+   // document.body.style.background = this.state.backgroundImage;
   }
 
+  updateBackground = (image) => {
+    this.setState({
+      backgroundImage: image
+    })
+  }
   render() {
-  
-  
+    let styleBackground = {}
+    if (this.state.backgroundImage) {
+      styleBackground = {
+        backgroundImage: "url(" + this.state.backgroundImage + ")"
+      }
+    }
     return (
-    
-     
-       
-      <div className="country-wrapper">
-   
+      <div style={styleBackground} className="country-body">
         <div className="country-info">  
           <br/>
             <h1> {this.state.country.name}</h1> 
             <img className ='flag-pic' src={this.state.country.flag} alt={this.state.country.name}/> 
             <hr />
             <p className="info-style"> 
-              The Capital City is: {this.state.country.capital},
-              and the region for {this.state.country.name} is: {this.state.country.region}, 
-              therefore the native name is: {this.state.country.nativeName}, 
-              and the spoken language is: {this.state.country.languages}, 
-              the used currency: {this.state.country.currencies}, 
-              
-          </p>
-
-
+                The Capital City is: {this.state.country.capital},
+                and the region for {this.state.country.name} is: {this.state.country.region}, 
+                therefore the native name is: {this.state.country.nativeName}, 
+                and the spoken language is: {this.state.country.languages}, 
+                the used currency: {this.state.country.currencies}, 
+                
+            </p>
+            {this.state.country.name.length && <Images updateBackground={this.updateBackground} countryName={this.state.country.name}/>}
+            
         </div>
 
-        <div className="container">
+     <div className="container">
         {this.state.country.name ? <Carousel countryName={this.state.country.name}/> : '' }
-        </div>
+        </div> 
 
       {this.state.country.name ? <Music name={this.state.country.name}/> : ''} 
         

@@ -4,6 +4,8 @@ import Logo from './Logo';
 import Country from './Country' 
  import Music from './Music' 
 // import Images from './Images' 
+// import Music from './Music' 
+import Images from './Images' 
 import Nav from './Nav' 
 import Explore from './Explore' 
 import './App.css'
