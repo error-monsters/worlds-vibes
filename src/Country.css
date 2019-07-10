@@ -22,8 +22,10 @@ h1 {
     border-radius: 20px;
 } 
 .country-body{ 
-    background-image: url(https://static-2.gumroad.com/res/gumroad/618114383609/asset_previews/e430b34b1f98b55edcd879858b44d4df/retina/Beautiful_20Sunrise_20Scene_204K_20Nature_20Background_20Flowers_20Plants_20Fog_20Mountains.jpg); 
+    /* background-image: url(https://static-2.gumroad.com/res/gumroad/618114383609/asset_previews/e430b34b1f98b55edcd879858b44d4df/retina/Beautiful_20Sunrise_20Scene_204K_20Nature_20Background_20Flowers_20Plants_20Fog_20Mountains.jpg);  */
     background-size: cover;
+    padding-top: 115px;
+    /* position: relative; */
 }
 .info-style {
 font-size: 30px; 
