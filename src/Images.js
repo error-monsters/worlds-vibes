@@ -1,5 +1,4 @@
 import React ,{Component} from 'react';
-import App from './App'
 import axios from 'axios'
 import './Images.css'
 
@@ -23,10 +22,12 @@ class Images extends Component {
             // console.log("Images")
            
             console.log(response.data.results)
-
-
+            let randomFirstAraay = Math.floor(Math.random() * response.data.results.length)
+            let randomSecondArray =Math.floor(Math.random() * response.data.results[randomFirstAraay].preview_photos.length)
+        
+            this.props.updateBackground(response.data.results[randomFirstAraay].preview_photos[randomSecondArray].urls.full);
             this.setState({
-              images: response.data.results
+              images: response.data.resultstu
             })
              
             
@@ -40,32 +41,22 @@ class Images extends Component {
       let randomSecondArray;
       if(this.state.images.length)
       {
-        randomFirstAraay = Math.floor(Math.random() * this.state.images.length)
+        randomFirstAraay = Math.floor(Math.random() * this.state.images.length -1)
         randomSecondArray =Math.floor(Math.random() * this.state.images[randomFirstAraay].preview_photos.length)
       }
       // console.log(this.state.images[randomFirstAraay])
-       
   
     return(
      
-          //   <div style= {{backgroundImage: `url(${this.state.images.length && <img src={this.state.images[randomFirstAraay].preview_photos[randomSecondArray].urls.full}/>} )`}}>
-          
-          //  </div>
-
-
-        
-  //      <div class="swiper-container">
-
-  //      <div class="swiper-wrapper">
      
+       <React.Fragment> 
 
-  //   </div>
-
-  //   <div class="swiper-pagination"></div>
-  //    </div>
-        <div>
-               {this.state.images.length && <img src={this.state.images[randomFirstAraay].preview_photos[randomSecondArray].urls.full} width="400" height="400"/>} 
-          </div>
+       </React.Fragment>
+  
+  
+        // <div>
+        //        {this.state.images.length && <img src={this.state.images[randomFirstAraay].preview_photos[randomSecondArray].urls.full} width="400" height="400"/>} 
+        //   </div>
 
 
     )

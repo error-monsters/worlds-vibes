@@ -14,7 +14,8 @@ import Images from './Images';
       nativeName: '',
       languages: '',
       currencies: ''
-    }
+    },
+    backgroundImage: ''
   }
 
   componentDidMount() {
@@ -41,9 +42,20 @@ import Images from './Images';
     })
   }
 
+  updateBackground = (image) => {
+    this.setState({
+      backgroundImage: image
+    })
+  }
   render() {
+    let styleBackground = {}
+    if (this.state.backgroundImage) {
+      styleBackground = {
+        backgroundImage: "url(" + this.state.backgroundImage + ")"
+      }
+    }
     return (
-      <div className="country-body">
+      <div style={styleBackground} className="country-body">
         <div className="country-info">  
         <br/>
              <h1> {this.state.country.name}</h1> 
@@ -57,7 +69,7 @@ import Images from './Images';
                 the used currency: {this.state.country.currencies}, 
                 
             </p>
-            {this.state.country.name.length && <Images countryName={this.state.country.name}/>}
+            {this.state.country.name.length && <Images updateBackground={this.updateBackground} countryName={this.state.country.name}/>}
             
         </div>
         </div>
