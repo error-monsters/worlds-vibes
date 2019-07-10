@@ -12,7 +12,7 @@ class About extends Component{
         return ( 
         <div className ='about-page'>
             <Nav />
-            <h1>hi</h1>
+           
         </div>)
     }
 }
