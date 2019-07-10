@@ -9,6 +9,7 @@ import markers from './markers';
   render() {
     const name = this.props.name;
     console.log(this.props)
+    console.log(this.props.name)
     const music = markers.find(countryObject => countryObject.country === name).music
 
     return (

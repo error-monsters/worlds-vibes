@@ -17,13 +17,15 @@ class Carousel extends Component {
   }
   componentDidUpdate() {
     // A whole lotta functions here, fired after every render.
-    const options = {
-      duration: 300,
-      onCycleTo: () => {
-        console.log("New Slide");
-      }
-    };
-    M.Carousel.init(this.Carousel, options);
+    if (this.state.images.length > 0 ) {
+      const options = {
+        duration: 300,
+        onCycleTo: () => {
+          console.log("New Slide");
+        }
+      };
+      M.Carousel.init(this.Carousel, options);
+    }
   }
   componentDidMount() {
     console.log('country name', this.props.countryName)
@@ -42,7 +44,7 @@ class Carousel extends Component {
   }
 
   render() {
-    console.log(this.state.images)
+    console.log('render carousel', this.state.images)
 
     return (
       <div
@@ -52,7 +54,7 @@ class Carousel extends Component {
         className="carousel"
       >
 
-        {this.state.images.map((image, index) => {
+        {this.state.images && this.state.images.map((image, index) => {
           return (
             <a key={index} className="carousel-item">
               <img alt={index} src={image.cover_photo.urls.full} />

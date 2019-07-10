@@ -89,10 +89,13 @@ import Images from './Images';
 
      <div className="container">
         {this.state.country.name ? <Carousel countryName={this.state.country.name}/> : '' }
+
+        {this.state.country.name ? <Music name={this.state.country.name}/> : ''} 
+        
         </div> 
 
-      {this.state.country.name ? <Music name={this.state.country.name}/> : ''} 
-        
+
+
 
 
       </div>
