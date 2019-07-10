@@ -8,6 +8,12 @@ import Carousel from "./Carousel";
 import Images from './Images';
 
  class Country extends Component {
+  // componentDidUpdate(){
+  //   document.body.style.background =  "url('https://static-2.gumroad.com/res/gumroad/618114383609/asset_previews/e430b34b1f98b55edcd879858b44d4df/retina/Beautiful_20Sunrise_20Scene_204K_20Nature_20Background_20Flowers_20Plants_20Fog_20Mountains.jpg')";
+  //   document.body.style.backgroundSize="cover";
+  // }
+
+
   state = {
     country: {
       name: '',
@@ -22,6 +28,8 @@ import Images from './Images';
   }
 
   componentDidMount() {
+
+    //console.log(this.props.countryName)
     axios.get(`https://restcountries.eu/rest/v2/name/${this.props.countryName}`)
     // axios.get(`https://restcountries.eu/rest/v1/name/{countryName}`)
 

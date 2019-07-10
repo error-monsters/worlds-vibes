@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, Component } from 'react';
 import ReactGlobe from 'react-globe';
 import markers from './markers';
 import Nav from './Nav' 
 import { Link } from 'react-router-dom' 
 import './Explore.css'
-
+import {Helmet} from 'react-helmet';
 
 
 function getTooltipContent(marker) {
@@ -26,6 +26,9 @@ function getMarkerLink(marker) {
   ); //pop up content
   
 }
+
+
+
 function Explore() {
   const [event, setEvent] = useState(null);
   const [details, setDetails] = useState(null);

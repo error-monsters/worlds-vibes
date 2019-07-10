@@ -4,7 +4,7 @@ body {
     /* background-image: url('./about_us.jpeg'); */
      background-size: cover;
      background-repeat: no-repeat;
-     background-attach: fixed;
+     /* background-attach: fixed; */
      animation: animate-bg 50s infinite linear;
     }
     
