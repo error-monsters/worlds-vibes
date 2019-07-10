@@ -9,7 +9,6 @@ import Explore from './Explore'
 import './App.css'
 import earth1 from "./earth1.png"
 import vid from './vid.mp4';
-
 import About from './About'
 
 

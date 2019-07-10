@@ -16,7 +16,7 @@ class Nav extends Component {
                 </li>
                 <li>
                   <Link to='/About'>About</Link>
-                  {/* <Route path='/About' component={About}/>  */}
+                
                   
                 </li>
                 <li>
