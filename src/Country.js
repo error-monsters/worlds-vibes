@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import { Route} from 'react-router-dom' 
 import axios from 'axios';
 import './Country.css'
+import Music from './Music' 
+import Carousel from "./Carousel";
+
 import Images from './Images';
 
  class Country extends Component {
@@ -31,8 +34,7 @@ import Images from './Images';
     // axios.get(`https://restcountries.eu/rest/v1/name/{countryName}`)
 
     .then( (result)=>{ 
-      //console.log(result)
-      // const countryName = this.props.id
+      console.log('country response', result)
         this.setState({
           country: {
             name: result.data[0].name, // result === xyz
@@ -69,10 +71,10 @@ import Images from './Images';
     return (
       <div style={styleBackground} className="country-body">
         <div className="country-info">  
-        <br/>
-             <h1> {this.state.country.name}</h1> 
-             <img className ='flag-pic' src={this.state.country.flag} alt={this.state.country.name}/> 
-             <hr />
+          <br/>
+            <h1> {this.state.country.name}</h1> 
+            <img className ='flag-pic' src={this.state.country.flag} alt={this.state.country.name}/> 
+            <hr />
             <p className="info-style"> 
                 The Capital City is: {this.state.country.capital},
                 and the region for {this.state.country.name} is: {this.state.country.region}, 
@@ -84,7 +86,19 @@ import Images from './Images';
             {this.state.country.name.length && <Images updateBackground={this.updateBackground} countryName={this.state.country.name}/>}
             
         </div>
-        </div>
+
+     <div className="container">
+        {this.state.country.name ? <Carousel countryName={this.state.country.name}/> : '' }
+
+        {this.state.country.name ? <Music name={this.state.country.name}/> : ''} 
+        
+        </div> 
+
+
+
+
+
+      </div>
     )
   }
 }

@@ -61,7 +61,7 @@ export default [
   {
     id: 7,
     city: 'Moscow',
-    country: 'Russia',
+    country: 'Russian Federation',
     color: 'white',
     coordinates: [55.751244, 37.618423],
     music: 'https://www.lengua.com/anthems/Russia.mp3',
@@ -112,7 +112,7 @@ export default [
   {
     id: 12,
     city: 'New Delhi',
-    country: 'India',
+    country: 'British Indian Ocean Territory',
     color: 'orange',
     coordinates: [28.644800,  77.216721],
     music: 'https://www.lengua.com/anthems/India.mp3',

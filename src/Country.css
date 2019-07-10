@@ -14,13 +14,23 @@ h1 {
 } 
 
 .country-info {
-    width: 500px;
+    width: 40%;
+    min-width: 400px;
     margin-left: 70px;
     background-color: aliceblue; 
     background-color: rgba(255,255,255,0.3);
     padding: 15px; 
     border-radius: 20px;
+    float:left;
+    box-shadow: 8px 8px 8px black;
+
 } 
+
+
+.country-info:hover{
+    box-shadow: 10px 10px 10px black;
+
+}
 .country-body{ 
     /* background-image: url(https://static-2.gumroad.com/res/gumroad/618114383609/asset_previews/e430b34b1f98b55edcd879858b44d4df/retina/Beautiful_20Sunrise_20Scene_204K_20Nature_20Background_20Flowers_20Plants_20Fog_20Mountains.jpg);  */
     background-size: cover;
