@@ -11,16 +11,17 @@ nav {
   }
   
   nav ul li {
-    display: inline-block;
+   display: block; 
+   
   }
   
   nav ul li a {
-    padding: 18px;
+    padding: 30px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-transform:uppercase;
     color:white;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;
     text-decoration: none;
     display: block;
   }
@@ -33,6 +34,7 @@ nav {
 
   .header-container {
     position: absolute;
-    left: 33%;
+    top: 70%; 
+    left: 90%;
     z-index: 1;
   }

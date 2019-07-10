@@ -4,7 +4,7 @@ import axios from 'axios';
 import './Country.css'
 import Music from './Music' 
 import Carousel from "./Carousel";
-
+import Logo from './Logo';
 import Images from './Images';
 
  class Country extends Component {
@@ -70,6 +70,13 @@ import Images from './Images';
     }
     return (
       <div style={styleBackground} className="country-body">
+         <div class="logo"> <Logo /> </div>  
+         <br/>
+         <br/>
+         <br/>
+         <br/>
+         <br/>
+         <br/>
         <div className="country-info">  
           <br/>
             <h1> {this.state.country.name}</h1> 
