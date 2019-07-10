@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { Route} from 'react-router-dom' 
 import axios from 'axios';
 import './Country.css'
-
+import Images from './Images';
 
  class Country extends Component {
   componentWillMount(){
@@ -20,7 +20,8 @@ import './Country.css'
       nativeName: '',
       languages: '',
       currencies: ''
-    }
+    },
+    backgroundImage: ''
   }
 
   componentDidMount() {
@@ -45,12 +46,30 @@ import './Country.css'
     .catch ({
 
     })
+
+
+   // document.body.style.background = this.state.backgroundImage;
   }
 
+  updateBackground = (image) => {
+    this.setState({
+      backgroundImage: image
+    })
+  }
   render() {
+    let styleBackground = {}
+    if (this.state.backgroundImage) {
+      styleBackground = {
+        backgroundImage: "url(" + this.state.backgroundImage + ")"
+      }
+    }
     return (
+<<<<<<< HEAD
       <div className="country-body">
         
+=======
+      <div style={styleBackground} className="country-body">
+>>>>>>> dc11a9ed39fab60110a48f1c36e710b8d1f649e4
         <div className="country-info">  
         <br/>
              <h1> {this.state.country.name}</h1> 
@@ -64,6 +83,8 @@ import './Country.css'
                 the used currency: {this.state.country.currencies}, 
                 
             </p>
+            {this.state.country.name.length && <Images updateBackground={this.updateBackground} countryName={this.state.country.name}/>}
+            
         </div>
         </div>
     )
