@@ -39,6 +39,13 @@ body{
     height: 100vh;
   }
 
+  .logo{
+    position: absolute;
+
+    top: 20px;
+    left: 17px;
+  }
+
   
   
  
