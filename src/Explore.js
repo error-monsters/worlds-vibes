@@ -4,7 +4,7 @@ import markers from './markers';
 import Nav from './Nav' 
 import { Link } from 'react-router-dom' 
 import './Explore.css'
-import {Helmet} from 'react-helmet';
+// import {Helmet} from 'react-helmet';
 
 
 function getTooltipContent(marker) {

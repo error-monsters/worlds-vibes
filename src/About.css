@@ -17,3 +17,8 @@ body {
 .about-page {
     background-image: url('./about_us.jpeg');
 }
+
+
+#root{
+    width: 100%;
+}
