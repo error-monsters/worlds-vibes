@@ -40,6 +40,9 @@ import Images from './Images';
     .catch ({
 
     })
+
+
+   // document.body.style.background = this.state.backgroundImage;
   }
 
   updateBackground = (image) => {

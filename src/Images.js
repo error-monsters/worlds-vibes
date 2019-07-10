@@ -11,7 +11,7 @@ class Images extends Component {
 
         }
 
-    componentDidMount = () => {
+    componentWillMount = () => {
       
         axios({
           method: "get",
@@ -27,7 +27,7 @@ class Images extends Component {
         
             this.props.updateBackground(response.data.results[randomFirstAraay].preview_photos[randomSecondArray].urls.full);
             this.setState({
-              images: response.data.resultstu
+              images: response.data.results
             })
              
             

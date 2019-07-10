@@ -21,3 +21,7 @@
   body {
     background-size: cover; 
   }
+
+  .country-body{
+    height: 100vh;
+  }
