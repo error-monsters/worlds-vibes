@@ -1,12 +1,5 @@
 
 
-body {
-    /* background-image: url('./about_us.jpeg'); */
-     background-size: cover;
-     background-repeat: no-repeat;
-     /* background-attach: fixed; */
-     animation: animate-bg 50s infinite linear;
-    }
     
     @keyframes animate-bg {
      from { background-size: 100%; background-position: 0% 0%; }
@@ -16,6 +9,10 @@ body {
 
 .about-page {
     background-image: url('./about_us.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-attach: fixed; */
+    animation: animate-bg 50s infinite linear;
 }
 
 
