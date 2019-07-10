@@ -1,17 +1,21 @@
 import React from 'react';
 import axios from 'axios';
 import './Music.css'
-
+import markers from './markers';
 
  class Music extends React.Component {
   
 
   render() {
+    const name = this.props.name;
+    console.log(this.props)
+    const music = markers.find(countryObject => countryObject.country === name).music
+
     return (
-    <div>
+    <div className="music">
 
 <audio  autoplay="autoplay" loop controls>
-        <source src="https://www.lengua.com/anthems/USA.mp3" type="audio/mp3" />   
+        <source src={music} type="audio/mp3" />   
     </audio>
 
     </div>

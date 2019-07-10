@@ -1,14 +1,22 @@
 import React, { Component } from "react";
+import axios from 'axios'
 import M from "materialize-css";
-import "materialize-css/dist/css/materialize.min.css";
 // import one from "../public/1.jpg";
 import two from "./2.png";
 import three from "./3.png";
- import four from "./4.jpg";
+import four from "./4.jpg";
 // import five from "../public/5.jpg";
+import "./Carousel.scss"
+
+
 
 class Carousel extends Component {
-  componentDidMount() {
+  state = {
+    // country: this.props.countryName,
+    images: []
+  }
+  componentDidUpdate() {
+    // A whole lotta functions here, fired after every render.
     const options = {
       duration: 300,
       onCycleTo: () => {
@@ -16,13 +24,26 @@ class Carousel extends Component {
       }
     };
     M.Carousel.init(this.Carousel, options);
-
-    //Instance Plugin
-    // let instance = M.Carousel.getInstance(this.Carousel);
-    // instance.next(2);
+  }
+  componentDidMount() {
+    console.log('country name', this.props.countryName)
+    // console.log("diddd")
+    axios({
+      method: "get",
+      url: `https://api.unsplash.com/search/collections?page=1&query=${this.props.countryName}&client_id=6a55232e978d0bd27dffd107ad0c5256760672498375b240849f43f6b779d41a`
+    })
+    .then(response => {
+      const imagesApi = response.data.results;
+      console.log('crousel', response)
+      this.setState({
+        images: imagesApi
+      })
+    })
   }
 
   render() {
+    console.log(this.state.images)
+
     return (
       <div
         ref={Carousel => {
@@ -30,24 +51,23 @@ class Carousel extends Component {
         }}
         className="carousel"
       >
-        {/* <a className="carousel-item">
-          <img alt="1" src={one} />
-        </a> */}
-        <a className="carousel-item">
-          <img alt="2" src={two} />
-        </a>
-        <a className="carousel-item">
-          <img alt="3" src={three} />
-        </a>
-        {/* {/* <a className="carousel-item"> */}
-          <img alt="4" src={four} />
-        </a>
-        <a className="carousel-item">
-          <img alt="5" src={five} />
-        </a> */}
+
+        {this.state.images.map((image, index) => {
+          return (
+            <a key={index} className="carousel-item">
+              <img alt={index} src={image.cover_photo.urls.full} />
+            </a>
+          )
+        })}
+
       </div>
-    );
+
+    )
   }
 }
+
+
+
+
 
 export default Carousel;

@@ -12,6 +12,7 @@ import vid from './vid.mp4';
 
 
 
+
 class App extends Component {
  
   render() {
@@ -21,15 +22,19 @@ class App extends Component {
         <Route exact path='/' render={()=>{
           return (
             <div class='home-route'> 
+        
               <Nav/> 
               <div className ='home-bg'>   
                 <video autoPlay loop muted >
                   <source src={vid} type="video/mp4" />
                 </video> 
+              
                 <Link className = 'virtical' to='/Explore'>Explore The World  </Link> 
                 <Link to='/Explore'>
                 <img id="small-img" src={earth1} alt ='earth pic'/> 
                 </Link>
+              
+               
               </div>
             </div>
           )
