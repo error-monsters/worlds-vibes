@@ -5,6 +5,12 @@ import './Country.css'
 
 
  class Country extends Component {
+  componentWillMount(){
+    document.body.style.background =  "url('https://static-2.gumroad.com/res/gumroad/618114383609/asset_previews/e430b34b1f98b55edcd879858b44d4df/retina/Beautiful_20Sunrise_20Scene_204K_20Nature_20Background_20Flowers_20Plants_20Fog_20Mountains.jpg')";
+    document.body.style.backgroundSize="cover";
+  }
+
+
   state = {
     country: {
       name: '',
@@ -44,6 +50,7 @@ import './Country.css'
   render() {
     return (
       <div className="country-body">
+        
         <div className="country-info">  
         <br/>
              <h1> {this.state.country.name}</h1> 

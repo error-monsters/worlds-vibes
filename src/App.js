@@ -13,7 +13,9 @@ import vid from './vid.mp4';
 
 
 class App extends Component {
- 
+ componentDidMount() {
+   document.body.style.background= 'black';
+ }
   render() {
     return ( 
       <React.Fragment>  
