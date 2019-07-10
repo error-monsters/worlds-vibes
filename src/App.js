@@ -8,7 +8,9 @@ import Country from './Country'
 import Images from './Images' 
 import Nav from './Nav' 
 import Explore from './Explore' 
-import './App.css'
+// import "font-face";
+
+import './App.scss'
 import earth1 from "./earth1.png"
 import vid from './vid.mp4';
 import About from './About'
@@ -37,7 +39,13 @@ class App extends Component {
                 </video> 
                 <div class="logo"> <Logo /> </div>  
               
-                <Link className = 'virtical' to='/Explore'>Explore The World  </Link> 
+                <Link className = 'virtical' to='/Explore'>Explore </Link> 
+                <div class="indicator">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                 
+               </div>
                 <Link to='/Explore'>
                 <img id="small-img" src={earth1} alt ='earth pic'/> 
                 </Link>

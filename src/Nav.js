@@ -15,16 +15,15 @@ class Nav extends Component {
        
               <ul>
                 <li>
-                  <a href="#">Explore</a>
+                  <Link to='/'>Explore</Link>
                 </li>
                 <li>
                   <Link to='/About'>About</Link>
-                
                   
                 </li>
-                <li>
+                {/* <li>
                   <a href="#">Search</a>
-                </li>
+                </li> */}
               </ul>
             </nav>
       </header>

@@ -15,8 +15,12 @@ body {
 }
 
 h1 {
+  position: absolute;
+  top: 15%; 
+  left: 90%;
   color: white;
   margin-left: 1px;
+
 
   font: {
     family: Anton, sans-serif;
