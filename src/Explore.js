@@ -3,27 +3,27 @@ import ReactGlobe from 'react-globe';
 import markers from './markers';
 import Nav from './Nav' 
 import { Link } from 'react-router-dom' 
-import airplane from './airplane.png'
 import './Explore.css' 
 import Logo from './Logo';
-// import {Helmet} from 'react-helmet';
+// import seeMore from 'seeMore.png';
 
 
 function getTooltipContent(marker) {
-  // console.log(marker.city)
   return `${marker.city}, ${marker.country}` // highlited name 
   
 }
 
 function getMarkerLink(marker) {
-  // console.log(marker.city)
   return   (
     <div>
         
       <p>{marker.city}, {marker.country} </p>
       <Link  className ='see-more-button' to={`/Country/${marker.country}`}> 
-      See More 
-      {/* <img id="air-img" src={airplane} alt ='airplane'/>  */}
+      View More  
+      {/* <div> */}
+      <br/>
+      <img id="air-img" src="https://static.thenounproject.com/png/57053-200.png" alt ='see more'/> 
+      {/* </div> */}
     </Link>
    </div>
     
@@ -59,7 +59,7 @@ function Explore() {
       <div class="logo"> <Logo /> </div> 
       <Nav/> 
       <div style={{ fontFamily: 'arial', width: '100vw', height: '100vh' }}>
-        {/* <Link className='ex-home' to='/'>Home</Link>  */}
+      
         <ReactGlobe
           markers={markers}
           markerOptions={{

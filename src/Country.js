@@ -34,7 +34,7 @@ import Images from './Images';
     // axios.get(`https://restcountries.eu/rest/v1/name/{countryName}`)
 
     .then( (result)=>{ 
-      console.log('country response', result)
+      // console.log('country response', result)
         this.setState({
           country: {
             name: result.data[0].name, // result === xyz
@@ -87,7 +87,7 @@ import Images from './Images';
                 and the region for {this.state.country.name} is: {this.state.country.region}, 
                 therefore the native name is: {this.state.country.nativeName}, 
                 and the spoken language is: {this.state.country.languages}, 
-                the used currency: {this.state.country.currencies}, 
+                the used currency: {this.state.country.currencies}.
                 
             </p>
             {this.state.country.name.length && <Images updateBackground={this.updateBackground} countryName={this.state.country.name}/>}

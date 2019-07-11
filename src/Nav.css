@@ -16,7 +16,7 @@ nav {
   }
   
   nav ul li a {
-    padding: 30px;
+    padding: 15px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-transform:uppercase;
     color:white;
@@ -34,7 +34,7 @@ nav {
 
   .header-container {
     position: absolute;
-    top: 70%; 
+    top: 65%; 
     left: 90%;
     z-index: 1;
   }
