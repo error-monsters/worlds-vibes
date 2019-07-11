@@ -12,6 +12,7 @@ class About extends Component{
         return ( 
         <div className ='about-page'>
             <Nav />
+            <iframe frameborder="no" width="1024" height="576" src="https://app.wideo.co/embed/26530131562753453961?width=1024&height=576&repeat=true&autoplay=true"></iframe>
            
         </div>)
     }
