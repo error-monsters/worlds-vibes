@@ -1,19 +1,17 @@
-
-
-    
-    @keyframes animate-bg {
-     from { background-size: 100%; background-position: 0% 0%; }
-     50% { background-size: 120%; background-position: 0% 20% }
-     to { background-size: 100%; background-position: 0% 0%; }
-    }
+iframe{
+    margin-left:13%;
+    margin-top:5%;
+}
 
 .about-page {
-    background-image: url('./about_us.jpeg');
+    background-image: url('./4.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     /* background-attach: fixed; */
     animation: animate-bg 50s infinite linear;
 }
+
+
 
 
 #root{
