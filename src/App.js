@@ -28,7 +28,7 @@ class App extends Component {
        
         <Route exact path='/' render={()=>{
           return (
-            <div class='home-route'> 
+            <div className='home-route'> 
         
               <Nav/> 
            
@@ -37,7 +37,7 @@ class App extends Component {
                 <video autoPlay loop muted >
                   <source src={vid} type="video/mp4" />
                 </video> 
-                <div class="logo"> <Logo /> </div>  
+                <div className="logo"> <Logo /> </div>  
               
                 <Link className = 'virtical' to='/Explore'>Explore </Link> 
                 <div class="indicator">

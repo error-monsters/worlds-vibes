@@ -32,6 +32,7 @@
   color: white;
   top: 100px; 
   right: 30px; 
+  margin-top: 6%;
 }
 
 
@@ -48,14 +49,20 @@
 
 .see-more-button {
   text-decoration: none; 
-  color: aliceblue;
+  color: black;
+  font-size: 30px; 
+  text-align: center;
+  display: flex;
   
 } 
 
-.air-img{
-  size: 30px;
-  width: 50px;
-  height: 3%;
+#air-img{
+  color: aliceblue;
+  /* background-color: aliceblue;  */
+  /* border-radius: 900px; */
+  margin-right: 20%; 
+  width: 17%;
+  height: 15%;
 }
 
   

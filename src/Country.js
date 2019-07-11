@@ -34,7 +34,7 @@ import Images from './Images';
     // axios.get(`https://restcountries.eu/rest/v1/name/{countryName}`)
 
     .then( (result)=>{ 
-      console.log('country response', result)
+      // console.log('country response', result)
         this.setState({
           country: {
             name: result.data[0].name, // result === xyz
@@ -83,11 +83,11 @@ import Images from './Images';
             <img className ='flag-pic' src={this.state.country.flag} alt={this.state.country.name}/> 
             <hr />
             <p className="info-style"> 
-                The Capital City is: {this.state.country.capital},
-                and the region for {this.state.country.name} is: {this.state.country.region}, 
-                therefore the native name is: {this.state.country.nativeName}, 
-                and the spoken language is: {this.state.country.languages}, 
-                the used currency: {this.state.country.currencies}, 
+                The capital city of {this.state.country.name} is: {this.state.country.capital},
+                It stabilizes in {this.state.country.region} region, 
+               the native name of {this.state.country.name} is: {this.state.country.nativeName}, 
+                and the spoken language there is: {this.state.country.languages}, 
+                the used currency in {this.state.country.name} is: {this.state.country.currencies}.
                 
             </p>
             {this.state.country.name.length && <Images updateBackground={this.updateBackground} countryName={this.state.country.name}/>}
