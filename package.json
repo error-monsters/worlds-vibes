@@ -18,7 +18,7 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "2.1.8",
     "react-video-cover": "^1.2.2",
-    "three": "0.103.0",
+    "three": "0.137.0",
     "video-react": "^0.14.0"
   },
   "devDependencies": {
